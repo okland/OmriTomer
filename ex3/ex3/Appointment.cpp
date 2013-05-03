@@ -11,9 +11,9 @@
 int Appointment::sort(const Appointment app){
     int result;
     
-    if(app.start>end){
+    if(app.from>till){
         result = 1;
-    }else if(app.end<start){
+    }else if(app.till<from){
         result=-1;
     }else{
         result = 0;
