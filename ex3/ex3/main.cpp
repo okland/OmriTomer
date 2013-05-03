@@ -42,7 +42,7 @@ int main(int argc, const char * argv[])
                 cin >> start ;
                 cout <<"Please enter the end time of the appointment (format : HH.MM (24H), for example 23.15 is 23:15))"<< endl<< ">>";
                 cin >> end ;
-                if(diary.addAppointment(day,start,end,subject)){
+                if(diary.addAppointment(day,start,end,subject)==1){
                      cout <<"Appointment added successfully"<< endl;
                 }else{
                     cout <<"Appointment addition failed"<< endl;
@@ -63,13 +63,17 @@ int main(int argc, const char * argv[])
                 cin >> day ;
                 cout <<"Please enter the start time of the appointment (format : HH.MM (24H), for example 23.15 is 23:15))"<< endl<< ">>";
                 cin >> start ;
-                diary.findAppointment(day,start);
+                if(diary.findAppointment(day,start)==NULL){
+                    cout<<"Appointment not found"<<endl;
+                }else{
+                    cout<<"Appointment found"<<endl;
+                }
                 break;
             case 5:
                 diary.printDiary();   break;
             case 6:
                 run = false;   break;
-    return 0;
+                return 0;
         }
     }
 }

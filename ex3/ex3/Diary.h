@@ -37,9 +37,8 @@ class Diary
     void cleanDiary();
     const Appointment* findAppointment(const int day,const float from);;
 
-    void printDiary(){
-        //TODO
-    };
+
+    void printDiary();
    	
 private:
 	Day week[7];	

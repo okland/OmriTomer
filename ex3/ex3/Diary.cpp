@@ -7,6 +7,11 @@
 //
 
 #include "Diary.h"
+#include "Day.h"
+#include "Appointment.h"
+#include <iostream>
+#include <iomanip>
+
 const int failed =-1;
 
 
@@ -46,4 +51,20 @@ const Appointment* Diary::findAppointment(const int day,const float from){
     }
     return NULL;
 };
+
+void Diary::printDiary()
+{
+    string days[7] = {"Monday","Tuesday","Wednsday","Thursday","Friday","Saturday","Sunday"};
+    
+    cout << setw(20)<<"";
+    for(int i=0;i<=6;++i){
+        cout << setw(20) << left <<days[i];
+    }
+    cout<<endl;
+    for(int i=0;i<=24;++i){
+        cout << setw(20) << i<<endl;
+    }
+    
+}
+
 
