@@ -8,15 +8,12 @@
 
 #include "Appointment.h"
 
-int Appointment::sort(const Appointment app){
-    int result;
-    
+const int Appointment::sort(const Appointment app){
     if(app.from>till){
-        result = 1;
+        return 1;
     }else if(app.till<from){
-        result=-1;
+        return -1;
     }else{
-        result = 0;
+        return 0;
     }
-    return result;
 }
