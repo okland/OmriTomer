@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C4B483211733CD9A0096CED6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4B483201733CD9A0096CED6 /* main.cpp */; };
 		C4B483231733CD9A0096CED6 /* ex3.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C4B483221733CD9A0096CED6 /* ex3.1 */; };
+		C4B4832B1733CE3E0096CED6 /* Day.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4B483291733CE3E0096CED6 /* Day.cpp */; };
+		C4B4832E1733CE490096CED6 /* Diary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4B4832C1733CE490096CED6 /* Diary.cpp */; };
+		C4B483311733CE5B0096CED6 /* Appointment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4B4832F1733CE5B0096CED6 /* Appointment.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +31,12 @@
 		C4B4831D1733CD9A0096CED6 /* ex3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ex3; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B483201733CD9A0096CED6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C4B483221733CD9A0096CED6 /* ex3.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ex3.1; sourceTree = "<group>"; };
+		C4B483291733CE3E0096CED6 /* Day.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Day.cpp; sourceTree = "<group>"; };
+		C4B4832A1733CE3E0096CED6 /* Day.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Day.h; sourceTree = "<group>"; };
+		C4B4832C1733CE490096CED6 /* Diary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Diary.cpp; sourceTree = "<group>"; };
+		C4B4832D1733CE490096CED6 /* Diary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diary.h; sourceTree = "<group>"; };
+		C4B4832F1733CE5B0096CED6 /* Appointment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Appointment.cpp; sourceTree = "<group>"; };
+		C4B483301733CE5B0096CED6 /* Appointment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appointment.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,12 @@
 			children = (
 				C4B483201733CD9A0096CED6 /* main.cpp */,
 				C4B483221733CD9A0096CED6 /* ex3.1 */,
+				C4B483291733CE3E0096CED6 /* Day.cpp */,
+				C4B4832A1733CE3E0096CED6 /* Day.h */,
+				C4B4832C1733CE490096CED6 /* Diary.cpp */,
+				C4B4832D1733CE490096CED6 /* Diary.h */,
+				C4B4832F1733CE5B0096CED6 /* Appointment.cpp */,
+				C4B483301733CE5B0096CED6 /* Appointment.h */,
 			);
 			path = ex3;
 			sourceTree = "<group>";
@@ -118,6 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4B483211733CD9A0096CED6 /* main.cpp in Sources */,
+				C4B4832B1733CE3E0096CED6 /* Day.cpp in Sources */,
+				C4B4832E1733CE490096CED6 /* Diary.cpp in Sources */,
+				C4B483311733CE5B0096CED6 /* Appointment.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
