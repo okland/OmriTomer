@@ -19,6 +19,19 @@ class Diary
 {
  
  public:
+    //CTOR
+	Diary(){};
+    
+	//DTOR
+	~Diary()
+	{
+		cleanDiary();
+        for(int i=0;i<7;++i){
+            //delete week[i]
+        }
+       // delete week;
+	};
+    
     const int addAppointment (const int day,const float from, const float till,const char* subject){
         if(verifyLegalDayNum(day)){
             return week[day-1].addAppointment(from,till,subject);
@@ -60,23 +73,5 @@ private:
             return true;
         }
     }
-protected:
-	//CTOR
-	Diary()
-	{
-        
-	}
-    
-	//DTOR
-	~Diary()
-	{
-		cleanDiary();
-        for(int i=0;i<7;++i){
-            delete week[i]
-        }
-        delete week;
-	}
-    
-	
 };
 #endif /* defined(__ex3__Diary__) */
