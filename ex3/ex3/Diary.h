@@ -52,10 +52,11 @@ class Diary
         }
     };
 
-    const Appointment findAppointment(const int day,const float from){
+    const Appointment* findAppointment(const int day,const float from){
         if(verifyLegalDayNum(day)){
-            return *week[day-1].findAppointment(from);
+            return week[day-1].findAppointment(from);
         }
+        return NULL;
     };
 
     void printDiary();
