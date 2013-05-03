@@ -43,7 +43,7 @@ class Diary
 private:
 	Day week[7];	
     
-    bool verifyLegalDayNum(const int day);
+    const bool verifyLegalDayNum(const int day);
     
     
 };
