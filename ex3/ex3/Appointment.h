@@ -15,14 +15,22 @@ using namespace std;
 class Appointment
 {
 public:
-    Appointment(float st,float en,string sub){start=st;end=en;subjet=sub;};
+    Appointment(float st,float en,string sub){from=st;till=en;subjet=sub;};
     ~Appointment(){};
     
     int sort(const Appointment app);
     
+    const float getFrom(){
+        return from;
+    };
+    
+    const float getTill(){
+        return from;
+    }
+    
 private:
-    float start;
-    float end;
+    float from;
+    float till;
     string subjet;
 };
 
