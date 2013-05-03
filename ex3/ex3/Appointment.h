@@ -18,7 +18,7 @@ public:
     Appointment(float st,float en,string sub){from=st;till=en;subjet=sub;};
     ~Appointment(){};
     
-    int sort(const Appointment app);
+    const int sort(const Appointment app);
     
     const float getFrom(){
         return from;
