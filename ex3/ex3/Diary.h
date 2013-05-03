@@ -19,14 +19,18 @@ class Diary
 {
  
  public:
-    void addAppointment (const int day,const float from, const float till,const char* subject){
+    const int addAppointment (const int day,const float from, const float till,const char* subject){
         if(verifyLegalDayNum(day)){
-            week[day-1].addAppointment(from,till,subject);
+            return week[day-1].addAppointment(from,till,subject);
+        }else{
+            return failed;
         }
     };	
-    void removeAppointment(const int day,const float from){
+    const int removeAppointment(const int day,const float from){
         if(verifyLegalDayNum(day)){
-            week[day-1].removeAppointment(from);
+            return week[day-1].removeAppointment(from);
+        }else{
+            return failed;
         }
     };
     void cleanDiary(){
@@ -35,7 +39,7 @@ class Diary
         }
     };
 
-    const Appointment findAppointment(const int day,const float hour){
+    const Appointment findAppointment(const int day,const float from){
         if(verifyLegalDayNum(day)){
             week[day-1].findAppointment(from);
         }
@@ -47,7 +51,8 @@ class Diary
    	
 private:
 	Day week[7];
-	
+	int failed =-1;
+    
     bool verifyLegalDayNum(const int day){
         if(day>7||day<1){
             return false;
