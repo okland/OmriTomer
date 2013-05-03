@@ -44,6 +44,7 @@ public:
     };
    	
 private:
+    
 	int failed = -1;
     int success = 1;
 };
