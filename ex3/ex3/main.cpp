@@ -34,7 +34,7 @@ int main(int argc, const char * argv[])
         
         switch (operation)  {
             case 1:
-                cout <<"Please enter the day of the appointment (Monday-1,....,Saturday-7)"<< endl<< ">>";
+                cout <<"Please enter the day of the appointment (Monday-1,...,Sunday-7)"<< endl<< ">>";
                 cin >> day ;
                 cout <<"Please enter the subject of the appointment"<< endl<< ">>";
                 cin >> subject ;
@@ -42,13 +42,29 @@ int main(int argc, const char * argv[])
                 cin >> start ;
                 cout <<"Please enter the end time of the appointment (format : HH.MM (24H), for example 23.15 is 23:15))"<< endl<< ">>";
                 cin >> end ;
-                diary.addAppointment();	break;
+                if(diary.addAppointment(day,start,end,subject)){
+                     cout <<"Appointment added successfully"<< endl;
+                }else{
+                    cout <<"Appointment addition failed"<< endl;
+                }
+                break;
             case 2:
-                diary.removeAppointment();	break;
+                cout <<"Please enter the day of the appointment (Monday-1,....,Sunday-7)"<< endl<< ">>";
+                cin >> day ;
+                cout <<"Please enter the start time of the appointment (format : HH.MM (24H), for example 23.15 is 23:15))"<< endl<< ">>";
+                cin >> start ;
+                diary.removeAppointment(day,start);
+                break;
             case 3:
-                diary.cleanAppointment();	break;
+                diary.cleanDiary();
+                break;
             case 4:
-                diary.findAppointment();  break;
+                cout <<"Please enter the day of the appointment (Monday-1,...,Sunday-7)"<< endl<< ">>";
+                cin >> day ;
+                cout <<"Please enter the start time of the appointment (format : HH.MM (24H), for example 23.15 is 23:15))"<< endl<< ">>";
+                cin >> start ;
+                diary.findAppointment(day,start);
+                break;
             case 5:
                 diary.printDiary();   break;
             case 6:
