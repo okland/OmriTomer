@@ -7,3 +7,16 @@
 //
 
 #include "Appointment.h"
+
+int Appointment::sort(const Appointment app){
+    int result;
+    
+    if(app.start>end){
+        result = 1;
+    }else if(app.end<start){
+        result=-1;
+    }else{
+        result = 0;
+    }
+    return result;
+}
