@@ -8,6 +8,8 @@
 
 #include <iostream>
 
+using namespace std;
+
 int main(int argc, const char * argv[])
 {
 
@@ -16,3 +18,30 @@ int main(int argc, const char * argv[])
     return 0;
 }
 
+void ourMain(){
+    int operation;
+    while(1)  {
+        cout <<  "1. Add appoiments." 	<< endl ;
+        cout <<  "2. Remove appoiment" 	<< endl ;
+        cout <<  "3. Clean Diary. "		<< endl ;
+        cout <<  "4. Find appoiment "		<< endl ;
+        cout <<  "5. Print Diary 	"	<< endl ;
+        cout <<  "6. Quit. 		"	<< endl ;
+        cout <<  "Enter your choice:" 	<< endl ;
+        cin >> operation ;
+        
+        switch (operation)  {
+            case 1:
+                addMeeting (…);	break;
+            case 2:
+                rmvMeeting(…);	break;
+            case 3:
+                cleanDiary(…);	break;
+            case 4:
+                findMeeting(…);  	break;
+            case 5:
+                printDiary(…);     	break;
+            case 6:				break;
+        }		
+    }
+}
