@@ -10,10 +10,21 @@
 #define __ex3__Day__
 
 #include <iostream>
+#include "Appointment.h"
+
 class Day
 {
     
 public:
+    //CTOR
+	Day(){};
+    
+	//DTOR
+	~Day()
+	{
+		cleanDay();
+	};
+    
     const int addAppointment (const float from, const float till,const char* subject){
         
     };
@@ -36,20 +47,5 @@ private:
     
 	int failed = -1;
     int success = 1;
-    
-protected:
-	//CTOR
-	Day()
-	{
-        
-	}
-    
-	//DTOR
-	~Day()
-	{
-		cleanDay();
-	}
-    
-	
 };
 #endif /* defined(__ex3__Day__) */
