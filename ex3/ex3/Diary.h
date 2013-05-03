@@ -32,7 +32,7 @@ class Diary
        // delete week;
 	};
     
-    const int addAppointment (const int day,const float from, const float till,const char* subject){
+    const int addAppointment (const int day,const float from, const float till,const string subject){
         if(verifyLegalDayNum(day)){
             return week[day-1].addAppointment(from,till,subject);
         }else{

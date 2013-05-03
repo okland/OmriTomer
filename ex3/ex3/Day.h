@@ -25,7 +25,7 @@ public:
 		cleanDay();
 	};
     
-    const int addAppointment (const float from, const float till,const char* subject){
+    const int addAppointment (const float from, const float till,string subject){
         
     };
     const int removeAppointment(const float from){
