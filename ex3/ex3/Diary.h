@@ -32,46 +32,20 @@ class Diary
        // delete week;
 	};
     
-    const int addAppointment (const int day,const float from, const float till,string subject){
-        if(verifyLegalDayNum(day)){
-            return week[day-1].addAppointment(from,till,subject);
-        }else{
-            return failed;
-        }
-    };	
-    const int removeAppointment(const int day,const float from){
-        if(verifyLegalDayNum(day)){
-            return week[day-1].removeAppointment(from);
-        }else{
-            return failed;
-        }
-    };
-    void cleanDiary(){
-        for(int i=0;i<7;++i){
-            week[i].cleanDay();
-        }
-    };
-
-    const Appointment findAppointment(const int day,const float from){
-        if(verifyLegalDayNum(day)){
-            return *week[day-1].findAppointment(from);
-        }
-    };
+    const int addAppointment (const int day,const float from, const float till,string subject);
+    const int removeAppointment(const int day,const float from);    
+    void cleanDiary();
+    const Appointment* findAppointment(const int day,const float from);;
 
     void printDiary(){
         //TODO
     };
    	
 private:
-	Day week[7];
-	int failed =-1;
+	Day week[7];	
     
-    bool verifyLegalDayNum(const int day){
-        if(day>7||day<1){
-            return false;
-        }else{
-            return true;
-        }
-    }
+    bool verifyLegalDayNum(const int day);
+    
+    
 };
 #endif /* defined(__ex3__Diary__) */
