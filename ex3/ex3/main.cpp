@@ -53,7 +53,11 @@ int main(int argc, const char * argv[])
                 cin >> day ;
                 cout <<"Please enter the start time of the appointment (format : HH.MM (24H), for example 23.15 is 23:15))"<< endl<< ">>";
                 cin >> start ;
-                diary.removeAppointment(day,start);
+                if(diary.removeAppointment(day,start)==1){
+                    cout<<"Apointment removed successfully"<<endl;
+                }else{
+                    cout<<"No appointment found to remove"<<endl;
+                }
                 break;
             case 3:
                 diary.cleanDiary();
