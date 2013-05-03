@@ -58,9 +58,7 @@ class Diary
         }
     };
 
-    void printDiary(){
-        //TODO
-    };
+    void printDiary();
    	
 private:
 	Day week[7];
