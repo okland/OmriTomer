@@ -15,7 +15,7 @@
 const int failed =-1;
 
 
-bool Diary::verifyLegalDayNum(const int day){
+const bool Diary::verifyLegalDayNum(const int day){
     if(day>7||day<1){
         return false;
     }else{
