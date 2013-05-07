@@ -26,7 +26,10 @@ public:
     
     const float getTill(){
         return from;
-    }
+    };
+    const string getSubject() const{
+        return subjet;
+    };
     
 private:
     float from;

@@ -33,10 +33,11 @@ class Diary
 	};
     
     const int addAppointment (const int day,const float from, const float till,string subject);
-    const int removeAppointment(const int day,const float from);    
+    const int removeAppointment(const int day,const float from);
+    const int copyAppointment(const int appDay,const float appFrom,const int day,const float from, const float till);
     void cleanDiary();
     const Appointment* findAppointment(const int day,const float from);;
-
+    
 
     void printDiary();
    	

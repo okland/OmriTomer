@@ -38,7 +38,13 @@ public:
     void printDay(){
         //TODO
     };
-   	
+    
+    int getNumOfApp(){
+        return appointmentList.size();
+    }
+    
+   	Appointment* appAtIndex(int i){return appointmentList.at(i);};
+    
 private:
     vector<Appointment*> appointmentList;
     int whereToPutAppointment(const Appointment app);

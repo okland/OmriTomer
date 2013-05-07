@@ -9,9 +9,9 @@
 #include "Appointment.h"
 
 const int Appointment::sort(const Appointment app){
-    if(app.from>till){
+    if(app.from>=till){
         return 1;
-    }else if(app.till<from){
+    }else if(app.till<=from){
         return -1;
     }else{
         return 0;
