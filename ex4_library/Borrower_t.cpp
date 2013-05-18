@@ -15,7 +15,7 @@ void Borrower_t::addBookBorrowed(const char* ISBN){
 void Borrower_t::borrowerReport(){
     cout<<"Name: "<<name<<" Uid: "<<uid<<endl;;
     if(booksBorrowed.size()>0){
-        cout<<"This person has borrowed the following "<<borrowerList.size()<<" books :"<<endl;
+        cout<<"This person has borrowed the following "<<booksBorrowed.size()<<" books :"<<endl;
         for (std::set<const char*>::iterator it=booksBorrowed.begin(); it!=booksBorrowed.end(); ++it){
             cout << ' ' << *it;
         }

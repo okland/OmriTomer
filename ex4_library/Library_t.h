@@ -33,6 +33,9 @@ public:
     int borrowBook(const char* uid,const char* ISBN);
     int returnBook(const char* uid,const char* ISBN);
     
+    void libraryBooksReport();
+    void libraryBorrowersReport();
+    
 private:
    map<const char*,Book_t*> books;
    map<const char*,Borrower_t*> borrowers;

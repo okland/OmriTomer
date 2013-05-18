@@ -115,6 +115,33 @@ int Library_t::returnBook(const char* uid,const char* ISBN){
     }
 };
 
+//print functions
+
+void Library_t::libraryBooksReport(){
+    unsigned long numOfBooks=books.size();
+    if(numOfBooks>0){
+        cout<<" The library have "<<numOfBooks<<" book right now "<<endl;
+        cout<<" Here are thier full details:"<<endl;
+        for (std::map<const char*,Book_t*>::iterator it=books.begin(); it!=books.end(); ++it){
+            it->second->bookReport();
+        }
+    }else{
+        cout<<" There are no books in library"<<endl;
+    }
+};
+
+void Library_t::libraryBorrowersReport(){
+    unsigned long  numOfBorrowers= borrowers.size();
+    if(numOfBorrowers>0){
+        cout<<" The library have "<<numOfBorrowers<<" books borrowers listed "<<endl;
+        cout<<" Here are thier full details:"<<endl;
+        for (std::map<const char*,Borrower_t*>::iterator it=borrowers.begin(); it!=borrowers.end(); ++it){
+            it->second->borrowerReport();
+        }        
+    }else{
+        cout<<" There are no books borrowers listed in library"<<endl;
+    }
+};
 
 
 #endif /* defined(__ex4__Library__) */
