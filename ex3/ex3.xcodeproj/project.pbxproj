@@ -234,6 +234,7 @@
 				C4B483281733CD9A0096CED6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,18 +6,8 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		D17A8F76174776C600EAF893 /* ex4_library.cp in Sources */ = {isa = PBXBuildFile; fileRef = D17A8F75174776C600EAF893 /* ex4_library.cp */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		D17A8F6C174776C600EAF893 /* ex4-library.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "ex4-library.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D17A8F70174776C600EAF893 /* ex4-library-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ex4-library-Prefix.pch"; sourceTree = "<group>"; };
-		D17A8F71174776C600EAF893 /* ex4_libraryProj.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ex4_libraryProj.xcconfig; sourceTree = "<group>"; };
-		D17A8F72174776C600EAF893 /* ex4_libraryTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ex4_libraryTarget.xcconfig; sourceTree = "<group>"; };
-		D17A8F73174776C600EAF893 /* ex4_library.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ex4_library.h; sourceTree = "<group>"; };
-		D17A8F74174776C600EAF893 /* ex4_libraryPriv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ex4_libraryPriv.h; sourceTree = "<group>"; };
-		D17A8F75174776C600EAF893 /* ex4_library.cp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ex4_library.cp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +24,6 @@
 		D17A8F63174776C600EAF893 = {
 			isa = PBXGroup;
 			children = (
-				D17A8F6E174776C600EAF893 /* ex4-library */,
 				D17A8F6D174776C600EAF893 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,27 +34,6 @@
 				D17A8F6C174776C600EAF893 /* ex4-library.dylib */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D17A8F6E174776C600EAF893 /* ex4-library */ = {
-			isa = PBXGroup;
-			children = (
-				D17A8F71174776C600EAF893 /* ex4_libraryProj.xcconfig */,
-				D17A8F72174776C600EAF893 /* ex4_libraryTarget.xcconfig */,
-				D17A8F73174776C600EAF893 /* ex4_library.h */,
-				D17A8F74174776C600EAF893 /* ex4_libraryPriv.h */,
-				D17A8F75174776C600EAF893 /* ex4_library.cp */,
-				D17A8F6F174776C600EAF893 /* Supporting Files */,
-			);
-			path = "ex4-library";
-			sourceTree = "<group>";
-		};
-		D17A8F6F174776C600EAF893 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D17A8F70174776C600EAF893 /* ex4-library-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +97,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D17A8F76174776C600EAF893 /* ex4_library.cp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

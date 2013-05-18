@@ -6,4 +6,8 @@
 //  Copyright (c) 2013 Omri Klinger. All rights reserved.
 //
 
-#include "Borrower.h"
+#include "Borrower_t.h"
+
+void Borrower_t::addBookBorrowed(const char* IBSN){
+    booksBorrowed.insert(IBSN);
+}

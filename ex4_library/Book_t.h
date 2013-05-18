@@ -9,6 +9,42 @@
 #ifndef ex4_library_Book_h
 #define ex4_library_Book_h
 
+#include <iostream>
+#include "set"
+#include "queue"
+
+using namespace std;
+
+class Book_t
+{
+public:
+    const char* name;
+    const char* author;
+    const char* IBSN;
+    
+    Book_t(const char* name,const char* author,const char* IBSN,int numOfCopies){
+        this->name= name;
+        this->author= author;
+        this->IBSN= IBSN;
+        this->numOfCopies= numOfCopies;
+        this->numOut= 0;
+    };
+    ~Book_t(){};
+    
+    
+    
+    void borrowBook(const char* uid);
+    void returnBook();
+    string status();    
+    const char* nextWaiting();
+    void addToWaiting(const char* uid);
+
+private:
+    int numOfCopies;
+    int numOut;
+    set<const char*> borrowerList;
+    queue<const char*> waitingList;
+};
 
 
 #endif
