@@ -67,7 +67,7 @@ int main(int argc, const char * argv[])
                 }
                 break;
             case 3:
-                //not implemented yet - not an important function for debug
+                // not an important function for debug not implemented yet
                 break;
             case 4:
                 cout <<"Please enter the borrower name"<< endl<< ">>";
@@ -90,7 +90,7 @@ int main(int argc, const char * argv[])
                 }
                 break;
             case 6:
-                //not implemented yet - not an important function for debug
+                // not an important function for debug not implemented yet
                 break;
             case 7:
                 cout <<"Please enter the book ISBN "<< endl<< ">>";
@@ -115,11 +115,12 @@ int main(int argc, const char * argv[])
                 }   
                 break;
             case 9:
-                cout <<"The Book Report"<< endl;
+                cout <<"The Book Report:"<< endl;
+                library.libraryBooksReport();
                 break;
             case 10:
-                cout <<"The Borrower Report"<< endl;
-                //not implemented yet
+                cout <<"The Borrower Report:"<< endl;
+                library.libraryBorrowersReport();
                 break;
             case 11:
                 run = false;   break;
