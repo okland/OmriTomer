@@ -18,83 +18,64 @@
 
 //books managment functions
 int Library_t::addBook(const char* name,const char* author,const char* IBSN,int numOfCopies){
-    if(findBookPos(IBSN)>=0){
+    if(books.find(IBSN)->second){
         return failed;
     }else{
-        books.insert(books.begin(),new Book_t(name,author,IBSN,numOfCopies));
+        books.insert(std::pair<const char*,Book_t*>(IBSN,new Book_t(name,author,IBSN,numOfCopies)));
         return success;
     }
 };
 
 int Library_t::removeBook(const char* IBSN){
-    int bookPos= findBookPos(IBSN);
-    if(bookPos>=0){
-        if(books[bookPos]->status()=="Full"){
-            delete books[bookPos];
-            books.erase(books.begin()+bookPos);
-        }else{
-            return failed;
-        }
+    std::map<const char*,Book_t*>::iterator it;
+    it=books.find(IBSN);
+    if(it->second){
+        delete it->second;
     }
+    books.erase(it);
     return success;
 };
 
 Book_t* Library_t::searchBook(const char* IBSN){
-    int pos= findBookPos(IBSN);
-    if(pos>0){
-        return books[pos];
+    std::map<const char*,Book_t*>::iterator it;
+    it=books.find(IBSN);
+    if(it->second){
+        return it->second;
     }else{
         return NULL;
     }
 };
 
-int Library_t::findBookPos(const char* IBSN){
-    for(int i=0;i<books.size();++i){
-        const char* tempIBSN= books[i]->IBSN;
-        if(tempIBSN==IBSN){
-            return i;
-        }
-    }
-    return failed;
-};
-
 //borowwers managment functions
 int Library_t::addBorrower(const char* name,const char* uid){
-    if(findBorrowerPos(uid)>=0){
+    if(borrowers.find(uid)->second){
         return failed;
     }else{
-        borrowers.insert(borrowers.begin(),new Borrower_t(name,uid));
+        borrowers.insert(std::pair<const char*,Borrower_t*>(uid,new Borrower_t(name,uid)));
         return success;
     }
 };
 
 int Library_t::removeBorrower(const char* uid){
-    int borrowerPos= findBorrowerPos(uid);
-    if(borrowerPos>=0){
-        delete borrowers[borrowerPos];
-        borrowers.erase(borrowers.begin()+borrowerPos);
+    std::map<const char*,Borrower_t*>::iterator it;
+    it=borrowers.find(uid);
+    if(it->second){
+        delete it->second;
     }
-    return success;
+    borrowers.erase(it);
+    return success
 };
 
 Borrower_t* Library_t::searchBorrower(const char* uid){
-    int pos= findBorrowerPos(uid);
-    if(pos>0){
-        return borrowers[pos];
+    std::map<const char*,Borrower_t*>::iterator it;
+    it=borrowers.find(uid);
+    if(it->second){
+        return it->second;
     }else{
         return NULL;
     }
 };
 
-int Library_t::findBorrowerPos(const char* uid){
-    for(int i=0;i<borrowers.size();++i){
-        const char* tempUid= borrowers[i]->uid;
-        if(tempUid==uid){
-            return i;
-        }
-    }
-    return failed;
-};
 
 //transaction mangment functions
 int Library_t::borrowBook(const char* uid,const char* IBSN){

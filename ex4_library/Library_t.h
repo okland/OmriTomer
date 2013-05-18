@@ -10,7 +10,7 @@
 #define ex4_library_library_h
 
 #include <iostream>
-#include "vector"
+#include "map"
 #include "Book_t.h"
 #include "Borrower_t.h"
 
@@ -34,11 +34,9 @@ public:
     int returnBook(const char* uid,const char* IBSN);
     
 private:
-   vector<Book_t*> books;
-   vector<Borrower_t*> borrowers;
+   map<const char*,Book_t*> books;
+   map<const char*,Borrower_t*> borrowers;
     
-   int findBookPos(const char* IBSN);
-   int findBorrowerPos(const char* uid);
 };
 
 
