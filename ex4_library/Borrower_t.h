@@ -25,6 +25,8 @@ public:
     };
     ~Borrower_t(){};
     
+    void borrowerReport();
+    
     void addBookBorrowed(const char* ISBN);
     
     

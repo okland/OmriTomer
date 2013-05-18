@@ -32,6 +32,7 @@ public:
     ~Book_t(){};
     
     
+    void bookReport();
     
     void borrowBook(const char* uid);
     void returnBook();

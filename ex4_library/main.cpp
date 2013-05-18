@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Omri Klinger. All rights reserved.
 //
 
-#include "main.h"
+
 
 
 #include <iostream>
@@ -115,7 +115,10 @@ int main(int argc, const char * argv[])
                 }   
                 break;
             case 9:
+                cout <<"The Book Report"<< endl;
+                break;
             case 10:
+                cout <<"The Borrower Report"<< endl;
                 //not implemented yet
                 break;
             case 11:

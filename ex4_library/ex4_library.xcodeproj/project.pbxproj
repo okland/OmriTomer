@@ -12,7 +12,6 @@
 		D17A8F951747798500EAF893 /* Borrower_t.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D17A8F931747798500EAF893 /* Borrower_t.cpp */; };
 		D17A8F961747798500EAF893 /* Borrower_t.h in Headers */ = {isa = PBXBuildFile; fileRef = D17A8F941747798500EAF893 /* Borrower_t.h */; };
 		D17A8F991747B03800EAF893 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D17A8F971747B03800EAF893 /* main.cpp */; };
-		D17A8F9A1747B03800EAF893 /* main.h in Headers */ = {isa = PBXBuildFile; fileRef = D17A8F981747B03800EAF893 /* main.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +23,6 @@
 		D17A8F931747798500EAF893 /* Borrower_t.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Borrower_t.cpp; sourceTree = "<group>"; };
 		D17A8F941747798500EAF893 /* Borrower_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Borrower_t.h; sourceTree = "<group>"; };
 		D17A8F971747B03800EAF893 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		D17A8F981747B03800EAF893 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 				D17A8F931747798500EAF893 /* Borrower_t.cpp */,
 				D17A8F941747798500EAF893 /* Borrower_t.h */,
 				D17A8F971747B03800EAF893 /* main.cpp */,
-				D17A8F981747B03800EAF893 /* main.h */,
 			);
 			name = ex4;
 			sourceTree = "<group>";
@@ -77,7 +74,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17A8F961747798500EAF893 /* Borrower_t.h in Headers */,
-				D17A8F9A1747B03800EAF893 /* main.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
