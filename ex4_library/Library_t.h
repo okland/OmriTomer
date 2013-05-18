@@ -22,16 +22,16 @@ public:
     Library_t(){};
     ~Library_t(){};
      
-    int addBook(const char* name,const char* author,const char* IBSN,int numOfCopies);
-    int removeBook(const char* IBSN);
-    Book_t* searchBook(const char* IBSN);
+    int addBook(const char* name,const char* author,const char* ISBN,int numOfCopies);
+    int removeBook(const char* ISBN);
+    Book_t* searchBook(const char* ISBN);
     
     int addBorrower(const char* name,const char* uid);
     int removeBorrower(const char* uid);
     Borrower_t* searchBorrower(const char* uid);
     
-    int borrowBook(const char* uid,const char* IBSN);
-    int returnBook(const char* uid,const char* IBSN);
+    int borrowBook(const char* uid,const char* ISBN);
+    int returnBook(const char* uid,const char* ISBN);
     
 private:
    map<const char*,Book_t*> books;

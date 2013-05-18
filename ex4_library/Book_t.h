@@ -20,12 +20,12 @@ class Book_t
 public:
     const char* name;
     const char* author;
-    const char* IBSN;
+    const char* ISBN;
     
-    Book_t(const char* name,const char* author,const char* IBSN,int numOfCopies){
+    Book_t(const char* name,const char* author,const char* ISBN,int numOfCopies){
         this->name= name;
         this->author= author;
-        this->IBSN= IBSN;
+        this->ISBN= ISBN;
         this->numOfCopies= numOfCopies;
         this->numOut= 0;
     };

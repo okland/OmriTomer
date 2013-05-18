@@ -17,18 +17,18 @@
 
 
 //books managment functions
-int Library_t::addBook(const char* name,const char* author,const char* IBSN,int numOfCopies){
-    if(books.find(IBSN)->second){
+int Library_t::addBook(const char* name,const char* author,const char* ISBN,int numOfCopies){
+    if(books.find(ISBN)->second){
         return failed;
     }else{
-        books.insert(std::pair<const char*,Book_t*>(IBSN,new Book_t(name,author,IBSN,numOfCopies)));
+        books.insert(std::pair<const char*,Book_t*>(ISBN,new Book_t(name,author,ISBN,numOfCopies)));
         return success;
     }
 };
 
-int Library_t::removeBook(const char* IBSN){
+int Library_t::removeBook(const char* ISBN){
     std::map<const char*,Book_t*>::iterator it;
-    it=books.find(IBSN);
+    it=books.find(ISBN);
     if(it->second){
         delete it->second;
     }
@@ -36,9 +36,9 @@ int Library_t::removeBook(const char* IBSN){
     return success;
 };
 
-Book_t* Library_t::searchBook(const char* IBSN){
+Book_t* Library_t::searchBook(const char* ISBN){
     std::map<const char*,Book_t*>::iterator it;
-    it=books.find(IBSN);
+    it=books.find(ISBN);
     if(it->second){
         return it->second;
     }else{
@@ -78,15 +78,15 @@ Borrower_t* Library_t::searchBorrower(const char* uid){
 
 
 //transaction mangment functions
-int Library_t::borrowBook(const char* uid,const char* IBSN){
-    Book_t* book=searchBook(IBSN);
+int Library_t::borrowBook(const char* uid,const char* ISBN){
+    Book_t* book=searchBook(ISBN);
     Borrower_t* borrower=searchBorrower(uid);
     if(book&&borrower){
         if(book->status()=="Out"){
             book->addToWaiting(uid);
         }else{
             book->borrowBook(uid);
-            borrower->addBookBorrowed(IBSN);
+            borrower->addBookBorrowed(ISBN);
         }
         return success;
     }else{
@@ -94,8 +94,8 @@ int Library_t::borrowBook(const char* uid,const char* IBSN){
     }
 };
 
-int Library_t::returnBook(const char* uid,const char* IBSN){
-    Book_t* book=searchBook(IBSN);
+int Library_t::returnBook(const char* uid,const char* ISBN){
+    Book_t* book=searchBook(ISBN);
     Borrower_t* borrower=searchBorrower(uid);
     if(book&&borrower){
         book->returnBook();
@@ -104,7 +104,7 @@ int Library_t::returnBook(const char* uid,const char* IBSN){
             Borrower_t* tempBorrower=searchBorrower(tempUid);
             if(tempBorrower){
                book->borrowBook(tempUid);
-               tempBorrower->addBookBorrowed(IBSN);
+               tempBorrower->addBookBorrowed(ISBN);
                return success;
             }
             return failed;

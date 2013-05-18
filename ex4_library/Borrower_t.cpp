@@ -8,6 +8,6 @@
 
 #include "Borrower_t.h"
 
-void Borrower_t::addBookBorrowed(const char* IBSN){
-    booksBorrowed.insert(IBSN);
+void Borrower_t::addBookBorrowed(const char* ISBN){
+    booksBorrowed.insert(ISBN);
 }
