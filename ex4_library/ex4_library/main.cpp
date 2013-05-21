@@ -18,12 +18,11 @@ int main(int argc, const char * argv[])
     Library_t library;
     int operation;
     bool run=true;
-    
     while(run)  {
-        char* name=NULL;
-        char* author=NULL;
-        char* ISBN=NULL;
-        char* uid=NULL;
+        char* name=new char;
+        char* author=new char;
+        char* ISBN=new char;
+        char* uid=new char;
         int numOfCopies;
         
         cout <<  "1. Add Book."<< endl ;

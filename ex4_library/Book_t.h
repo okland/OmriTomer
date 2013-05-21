@@ -39,6 +39,7 @@ public:
     string status();    
     const char* nextWaiting();
     void addToWaiting(const char* uid);
+    int getNumOut(){return this->numOut;};
 
 private:
     int numOfCopies;

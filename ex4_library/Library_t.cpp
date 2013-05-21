@@ -7,73 +7,97 @@
 //
 
 #include "Library_t.h"
-
+#include <string.h>
 
 #ifndef __ex4__Library__
 #define __ex4__Library__
 
 #define failed -1;
 #define success 1;
-
+using namespace std;
 
 //books managment functions
 int Library_t::addBook(const char* name,const char* author,const char* ISBN,int numOfCopies){
-    if(books.find(ISBN)->second){
+    if(strcmp(books.find(ISBN)->second->ISBN,ISBN)==0){
         return failed;
     }else{
-        books.insert(std::pair<const char*,Book_t*>(ISBN,new Book_t(name,author,ISBN,numOfCopies)));
+        books.insert(pair<const char*,Book_t*>(ISBN,new Book_t(name,author,ISBN,numOfCopies)));
         return success;
     }
 };
 
 int Library_t::removeBook(const char* ISBN){
-    std::map<const char*,Book_t*>::iterator it;
-    it=books.find(ISBN);
-    if(it->second){
-        delete it->second;
-    }
-    books.erase(it);
+    map<const char*,Book_t*>::iterator it=books.begin();
+    if(books.size()>0){
+    while (it != books.end()) {
+        if(strcmp(it->first,ISBN)==0){
+            if(it->second->getNumOut()==0){
+                map<const char*,Book_t*>::iterator toErase=it;
+                ++it;
+                books.erase(toErase);
+                break;
+            }else{
+                return failed;
+            }
+        }else{
+            ++it;
+        }
+    }}
     return success;
 };
 
 Book_t* Library_t::searchBook(const char* ISBN){
-    std::map<const char*,Book_t*>::iterator it;
-    it=books.find(ISBN);
-    if(it->second){
-        return it->second;
-    }else{
-        return NULL;
-    }
+    map<const char*,Book_t*>::iterator it=books.begin();
+    if(books.size()>0){
+        while (it != books.end()) {
+            if(strcmp(it->first,ISBN)==0){
+                return it->second;
+            }else{
+                ++it;
+            }
+        }}
+    return NULL;
 };
 
 //borowwers managment functions
 int Library_t::addBorrower(const char* name,const char* uid){
-    if(borrowers.find(uid)->second){
+    if(strcmp(borrowers.find(uid)->first,uid)==0){
         return failed;
     }else{
-        borrowers.insert(std::pair<const char*,Borrower_t*>(uid,new Borrower_t(name,uid)));
+        borrowers.insert(pair<const char*,Borrower_t*>(uid,new Borrower_t(name,uid)));
         return success;
     }
 };
 
 int Library_t::removeBorrower(const char* uid){
-    std::map<const char*,Borrower_t*>::iterator it;
-    it=borrowers.find(uid);
-    if(it->second){
-        delete it->second;
+    map<const char*,Borrower_t*>::iterator it;
+    it=borrowers.begin();
+    
+    while (it != borrowers.end()) {
+        if(strcmp(it->first,uid)==0){
+            map<const char*,Borrower_t*>::iterator toErase=it;
+            ++it;
+            borrowers.erase(toErase);
+            break;
+        }else{
+            ++it;
+        }
     }
-    borrowers.erase(it);
     return success
 };
 
 Borrower_t* Library_t::searchBorrower(const char* uid){
-    std::map<const char*,Borrower_t*>::iterator it;
-    it=borrowers.find(uid);
-    if(it->second){
-        return it->second;
-    }else{
-        return NULL;
+    map<const char*,Borrower_t*>::iterator it;
+    it=borrowers.begin();
+    
+    while (it != borrowers.end()) {
+        if(strcmp(it->first,uid)==0){
+            return it->second;
+        }else{
+            ++it;
+        }
     }
+    return NULL;
 };
 
 
