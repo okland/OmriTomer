@@ -35,7 +35,7 @@ public:
     void bookReport();
     
     void borrowBook(const char* uid);
-    void returnBook();
+    void returnBook(const char* uid);
     string status();    
     const char* nextWaiting();
     void addToWaiting(const char* uid);

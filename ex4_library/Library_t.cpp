@@ -75,10 +75,14 @@ int Library_t::removeBorrower(const char* uid){
     
     while (it != borrowers.end()) {
         if(strcmp(it->first,uid)==0){
-            map<const char*,Borrower_t*>::iterator toErase=it;
-            ++it;
-            borrowers.erase(toErase);
-            break;
+            if(it->second->numOfBorrowedBooks()==0){
+                map<const char*,Borrower_t*>::iterator toErase=it;
+                ++it;
+                borrowers.erase(toErase);
+                break;
+            }else{
+                return failed;
+            }
         }else{
             ++it;
         }
@@ -108,6 +112,7 @@ int Library_t::borrowBook(const char* uid,const char* ISBN){
     if(book&&borrower){
         if(book->status()=="Out"){
             book->addToWaiting(uid);
+            return 2;
         }else{
             book->borrowBook(uid);
             borrower->addBookBorrowed(ISBN);
@@ -122,7 +127,8 @@ int Library_t::returnBook(const char* uid,const char* ISBN){
     Book_t* book=searchBook(ISBN);
     Borrower_t* borrower=searchBorrower(uid);
     if(book&&borrower){
-        book->returnBook();
+        book->returnBook(ISBN);
+        borrower->returnBook(uid);
         const char* tempUid=book->nextWaiting();
         if(tempUid){
             Borrower_t* tempBorrower=searchBorrower(tempUid);
