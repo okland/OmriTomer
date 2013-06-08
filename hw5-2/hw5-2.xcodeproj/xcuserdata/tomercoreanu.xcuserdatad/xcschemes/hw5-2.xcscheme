@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D15AFDAB1763805200B4ADBD"
-               BuildableName = "libhw5-2.dylib"
+               BlueprintIdentifier = "C461E2871763AD09006E1F9D"
+               BuildableName = "hw5-2"
                BlueprintName = "hw5-2"
                ReferencedContainer = "container:hw5-2.xcodeproj">
             </BuildableReference>
@@ -29,6 +29,15 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C461E2871763AD09006E1F9D"
+            BuildableName = "hw5-2"
+            BlueprintName = "hw5-2"
+            ReferencedContainer = "container:hw5-2.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -39,6 +48,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C461E2871763AD09006E1F9D"
+            BuildableName = "hw5-2"
+            BlueprintName = "hw5-2"
+            ReferencedContainer = "container:hw5-2.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -48,6 +66,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "C461E2871763AD09006E1F9D"
+            BuildableName = "hw5-2"
+            BlueprintName = "hw5-2"
+            ReferencedContainer = "container:hw5-2.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
