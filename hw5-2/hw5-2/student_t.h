@@ -14,6 +14,9 @@ using namespace std;
 
 class Student_t {
     
+    
+private:
+    void attachTo(Subject_t * _subject);
 };
 
 #endif /* defined(__hw5_2__student_t__) */

@@ -10,6 +10,11 @@
 #define __hw5_2__university_t__
 
 #include <iostream>
+#include <vector>
+#include "ESF_Student_t.h"
+#include "FOH_Student_t.h"
+
+
 using namespace std;
 
 
@@ -25,6 +30,14 @@ public:
     //notify esf students that next day lecture is canceled
     void nextDayLectureCancel();
     
+    void Attach(Observer_t* _observer);
+    void Detach(Observer_t* _observer);
+
+protected:
+    void Notify();
+    void NotifyEsf();
+
+
     
 private:
     //dont allow others to create objects
@@ -40,6 +53,10 @@ private:
     
     //dont allow assignments
     void operator=(University_t& _un);
+    
+    //Observers vectors
+    vector<FOH_Student_t*> FOH;
+	vector<ESF_Student_t*> ESF;
     
 };
 
