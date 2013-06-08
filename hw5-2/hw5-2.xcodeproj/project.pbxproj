@@ -33,16 +33,16 @@
 		C461E2991763AD2E006E1F9D /* ImpStudent_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImpStudent_t.h; sourceTree = "<group>"; };
 		C461E29A1763AD2E006E1F9D /* Observer_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Observer_t.cpp; sourceTree = "<group>"; };
 		C461E29B1763AD2E006E1F9D /* Observer_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Observer_t.h; sourceTree = "<group>"; };
-		C461E29C1763AD2E006E1F9D /* student_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = student_t.cpp; sourceTree = "<group>"; };
-		C461E29D1763AD2E006E1F9D /* student_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = student_t.h; sourceTree = "<group>"; };
-		C461E29E1763AD2E006E1F9D /* studentBase_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = studentBase_t.cpp; sourceTree = "<group>"; };
-		C461E29F1763AD2E006E1F9D /* studentBase_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = studentBase_t.h; sourceTree = "<group>"; };
-		C461E2A01763AD2E006E1F9D /* studentFactory_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = studentFactory_t.cpp; sourceTree = "<group>"; };
-		C461E2A11763AD2E006E1F9D /* studentFactory_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = studentFactory_t.h; sourceTree = "<group>"; };
+		C461E29C1763AD2E006E1F9D /* Student_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student_t.cpp; sourceTree = "<group>"; };
+		C461E29D1763AD2E006E1F9D /* Student_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student_t.h; sourceTree = "<group>"; };
+		C461E29E1763AD2E006E1F9D /* StudentBase_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StudentBase_t.cpp; sourceTree = "<group>"; };
+		C461E29F1763AD2E006E1F9D /* StudentBase_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentBase_t.h; sourceTree = "<group>"; };
+		C461E2A01763AD2E006E1F9D /* StudentFactory_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StudentFactory_t.cpp; sourceTree = "<group>"; };
+		C461E2A11763AD2E006E1F9D /* StudentFactory_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentFactory_t.h; sourceTree = "<group>"; };
 		C461E2A21763AD2E006E1F9D /* Subject_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Subject_t.cpp; sourceTree = "<group>"; };
 		C461E2A31763AD2E006E1F9D /* Subject_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Subject_t.h; sourceTree = "<group>"; };
-		C461E2A41763AD2E006E1F9D /* university_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = university_t.cpp; sourceTree = "<group>"; };
-		C461E2A51763AD2E006E1F9D /* university_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = university_t.h; sourceTree = "<group>"; };
+		C461E2A41763AD2E006E1F9D /* University_t.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = University_t.cpp; sourceTree = "<group>"; };
+		C461E2A51763AD2E006E1F9D /* University_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = University_t.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,16 +79,16 @@
 				C461E2991763AD2E006E1F9D /* ImpStudent_t.h */,
 				C461E29A1763AD2E006E1F9D /* Observer_t.cpp */,
 				C461E29B1763AD2E006E1F9D /* Observer_t.h */,
-				C461E29C1763AD2E006E1F9D /* student_t.cpp */,
-				C461E29D1763AD2E006E1F9D /* student_t.h */,
-				C461E29E1763AD2E006E1F9D /* studentBase_t.cpp */,
-				C461E29F1763AD2E006E1F9D /* studentBase_t.h */,
-				C461E2A01763AD2E006E1F9D /* studentFactory_t.cpp */,
-				C461E2A11763AD2E006E1F9D /* studentFactory_t.h */,
+				C461E29C1763AD2E006E1F9D /* Student_t.cpp */,
+				C461E29D1763AD2E006E1F9D /* Student_t.h */,
+				C461E29E1763AD2E006E1F9D /* StudentBase_t.cpp */,
+				C461E29F1763AD2E006E1F9D /* StudentBase_t.h */,
+				C461E2A01763AD2E006E1F9D /* StudentFactory_t.cpp */,
+				C461E2A11763AD2E006E1F9D /* StudentFactory_t.h */,
 				C461E2A21763AD2E006E1F9D /* Subject_t.cpp */,
 				C461E2A31763AD2E006E1F9D /* Subject_t.h */,
-				C461E2A41763AD2E006E1F9D /* university_t.cpp */,
-				C461E2A51763AD2E006E1F9D /* university_t.h */,
+				C461E2A41763AD2E006E1F9D /* University_t.cpp */,
+				C461E2A51763AD2E006E1F9D /* University_t.h */,
 				C461E2941763AD25006E1F9D /* ESF_Student_t.cpp */,
 				C461E2951763AD25006E1F9D /* ESF_Student_t.h */,
 				C461E2961763AD25006E1F9D /* FOH_Student_t.cpp */,

@@ -6,18 +6,18 @@
 //  Copyright (c) 2013 Omri Klinger. All rights reserved.
 //
 
-#include "studentBase_t.h"
+#include "StudentBase_t.h"
 using namespace std;
 
 StudentBase_t::StudentBase_t(const string _name){
     name=_name;
 };
 
-string StudentBase_t::GetFaculty() const {
+const string StudentBase_t::GetFaculty() const {
     return faculty;
 }
 
-string StudentBase_t::GetName()const {
+const string StudentBase_t::GetName()const {
     return name;
 }
 

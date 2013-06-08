@@ -18,8 +18,8 @@ class StudentBase_t:
         StudentBase_t(string _name);
         ~StudentBase_t(){};
     
-        virtual string GetName() const;
-        virtual string GetFaculty() const;
+        virtual const string GetName() const;
+        virtual const string GetFaculty() const;
         virtual void SetFaculty(const string _faculty);
 
     private:

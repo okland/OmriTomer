@@ -8,3 +8,6 @@
 
 #include "FOH_Student_t.h"
 
+FOH_Student_t::FOH_Student_t(ImpStudent_t* _impStudent): Student_t(_impStudent){
+    theStudent->setFaculty("FOH");    
+}

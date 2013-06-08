@@ -6,13 +6,26 @@
 //  Copyright (c) 2013 Omri Klinger. All rights reserved.
 //
 
-#include "university_t.h"
+#include "University_t.h"
 
 University_t University_t::un;
 
 University_t& University_t::getUn(){
     return un;
 }
+
+void University_t::priceUp(){
+    cout << "University price goes up notifing all students"
+    << endl;
+    Notify();
+};
+
+void University_t::nextDayLectureCancel(){
+    Notify();
+    cout << "Next day lecture was canceled notifing all the ESF students"<<endl;
+    NotifyEsf();
+    
+};
 
 void University_t::Attach(Observer_t* _observer) {
 	Student_t* student = (Student_t*)_observer;
