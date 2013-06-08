@@ -12,14 +12,15 @@
 #include <iostream>
 using namespace std; 
 
-class StudentBase_t {
+class StudentBase_t:
+    public ImpStudent_t{
     public:
         StudentBase_t(string _name);
         ~StudentBase_t(){};
     
-        string GetName() const;
-        string GetFaculty() const;
-        void SetFaculty(const string _faculty);
+        virtual string GetName() const;
+        virtual string GetFaculty() const;
+        virtual void SetFaculty(const string _faculty);
 
     private:
         //not allowed to be called

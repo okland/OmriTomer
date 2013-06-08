@@ -10,13 +10,14 @@
 #define __hw5_2__student_t__
 
 #include <iostream>
+#include "Subject_t.h"
 using namespace std;
 
 class Student_t {
     
     
 private:
-    void attachTo(Subject_t * _subject);
+    void attachTo(Subject_t *_subject);
 };
 
 #endif /* defined(__hw5_2__student_t__) */

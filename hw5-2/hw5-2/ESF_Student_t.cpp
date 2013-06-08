@@ -7,3 +7,7 @@
 //
 
 #include "ESF_Student_t.h"
+
+void ESF_Student_t::updateAll(Subject_t* _subject){
+  cout<< "Student " 
+};
