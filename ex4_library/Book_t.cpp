@@ -14,8 +14,16 @@ void Book_t::borrowBook(const char* uid){
     numOut++;
 }
 
-void Book_t::returnBook(){
+void Book_t::returnBook(const char* uid){
     numOut--;
+    set<const char*>::iterator it;
+    for (it=borrowerList.begin(); it!=borrowerList.end(); ++it){
+        if(strcmp(*it,uid)==0){
+            borrowerList.erase(it);
+            break;
+        }
+    }
+
 }
 
 string Book_t::status(){
@@ -52,6 +60,6 @@ void Book_t::bookReport(){
         }
         cout<<endl;
     }else{
-        cout<<"This book has not been borrowed yet"<<endl;
+        cout<<"This book is not borrowed for the moment"<<endl;
     }
 }

@@ -28,9 +28,12 @@ public:
     void borrowerReport();
     
     void addBookBorrowed(const char* ISBN);
+    int numOfBorrowedBooks(){return (int)booksBorrowed.size();};
+    void returnBook(const char *ISBN);
     
     
 private:
+    int booksIn;
     set<const char*> booksBorrowed;
     
 };

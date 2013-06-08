@@ -7,9 +7,22 @@
 //
 
 #include "Borrower_t.h"
+#include <String.h>
+
+using namespace std;
 
 void Borrower_t::addBookBorrowed(const char* ISBN){
     booksBorrowed.insert(ISBN);
+    booksIn++;
+}
+void::Borrower_t::returnBook(const char* ISBN){
+    set<const char*>::iterator it;
+    for (it=booksBorrowed.begin(); it!=booksBorrowed.end(); ++it){
+        if(strcmp(*it,ISBN)==0){
+            booksBorrowed.erase(it);
+            break;
+        }
+    }
 }
 
 void Borrower_t::borrowerReport(){
@@ -21,6 +34,6 @@ void Borrower_t::borrowerReport(){
         }
         cout<<endl;
     }else{
-        cout<<"This person has not borrowed any books yet"<<endl;
+        cout<<"This person has not any borrowed books for the Moment"<<endl;
     }
 }

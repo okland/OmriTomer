@@ -18,13 +18,13 @@ int main(int argc, const char * argv[])
     Library_t library;
     int operation;
     bool run=true;
-    
     while(run)  {
-        char* name=NULL;
-        char* author=NULL;
-        char* ISBN=NULL;
-        char* uid=NULL;
+        char* name=new char;
+        char* author=new char;
+        char* ISBN=new char;
+        char* uid=new char;
         int numOfCopies;
+        int result =0;
         
         cout <<  "1. Add Book."<< endl ;
         cout <<  "2. Remove Book" << endl ;
@@ -67,7 +67,13 @@ int main(int argc, const char * argv[])
                 }
                 break;
             case 3:
-                // not an important function for debug not implemented yet
+                cout <<"Please enter the book ISBN you want to search"<< endl<< ">>";
+                cin >> ISBN ;
+                if(library.searchBook(ISBN)){
+                    cout<<"Book found"<<endl;
+                }else{
+                    cout<<"Book not found"<<endl;
+                }
                 break;
             case 4:
                 cout <<"Please enter the borrower name"<< endl<< ">>";
@@ -90,15 +96,24 @@ int main(int argc, const char * argv[])
                 }
                 break;
             case 6:
-                // not an important function for debug not implemented yet
+                cout <<"Please enter the borrower uid you want to search"<< endl<< ">>";
+                cin >> uid ;
+                if(library.searchBorrower(uid)){
+                     cout<<"Borrower found"<<endl;
+                }else{
+                     cout<<"Borrower not found"<<endl;
+                }
                 break;
             case 7:
                 cout <<"Please enter the book ISBN "<< endl<< ">>";
                 cin >> ISBN ;
                 cout <<"Please enter the borrower uid"<< endl<< ">>";
                 cin >> uid ;
-                if(library.borrowBook((const char*)uid,(const char*)ISBN)==1){
+                result =library.borrowBook((const char*)uid,(const char*)ISBN);
+                if(result==1){
                     cout <<"Book borrowed successfully"<< endl;
+                }else if(result==2){
+                    cout <<"Borrower added to waiting list for this book"<< endl;
                 }else{
                     cout <<"Book borrowed  failed"<< endl;
                 }
