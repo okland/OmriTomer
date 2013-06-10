@@ -14,14 +14,14 @@
 #include "ImpStudent_t.h"
 #include "ESF_Student_t.h"
 #include "FOH_Student_t.h"
-#include "StudentBase_t.h"
+#include "Student_t.h"
 
 
 using namespace std;
 
 class StudentFactory_t {
 public:
-     static Student_t* generateStudent(const string _name,const string _faculty);
+     static ImpStudent_t* generateStudent(const string _name,const string _faculty);
 private:
     //has only static method not created and not eliminated
     StudentFactory_t(void);

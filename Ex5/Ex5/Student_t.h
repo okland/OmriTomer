@@ -14,15 +14,24 @@
 #include "Observer_t.h"
 
 using namespace std;
+class ImpStudent_t;
 
-class Student_t:
-public Observer_t{
+class Student_t{
     friend class StudentFactory_t;
 public:
-    virtual void AttachTo(Subject_t *_subject);
-    virtual void DetachTo(Subject_t *_subject);
-    virtual void Update(Subject_t *_subject);
+    virtual void AttachTo(Subject_t *_subject){
+        theStudent->AttachTo(_subject);
+    };
+    virtual void DetachTo(Subject_t *_subject){
+        theStudent->DetachTo(_subject);
+    };
+    virtual void Update(Subject_t *_subject){
+        theStudent->Update(_subject);
+    };
     
+    Student_t(const string _name,const string _faculty){
+        theStudent=new ImpStudent_t(_name,_faculty);
+    };
     const string GetName()const;
     const string GetFaculty()const;
     void SetFaculty(const string _faculty);

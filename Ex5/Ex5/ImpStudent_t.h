@@ -11,16 +11,27 @@
 
 #include <iostream>
 #include <string>
+#include "Observer_t.h"
 
 using namespace std;
 
-class ImpStudent_t{
+class ImpStudent_t : public Observer_t{
 public:
-    virtual const string GetName()const=0;
-    virtual const string GetFaculty()const=0;
-    virtual void SetFaculty(const string _faculty)const=0;
+    ImpStudent_t(const string _name,const string _faculty){
+        name = _name;
+        faculty = _faculty;
+    }
+    void AttachTo(Subject_t *_subject);
+    void DetachTo(Subject_t *_subject);
+    void Update(Subject_t *_subject);
+    virtual const string GetName()const;
+    virtual const string GetFaculty()const;
+    virtual void SetFaculty(const string _faculty);
     ~ImpStudent_t(void){};
 protected:
     ImpStudent_t(void){};
+    string name;
+    string faculty;
+    
 };
 #endif /* defined(__Ex5__ImpStudent_t__) */

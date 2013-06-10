@@ -10,14 +10,19 @@
 #define __Ex5__University_t__
 
 #include <iostream>
+#include <vector>
+#include "Subject_t.h"
+#include "Observer_t.h"
+#include "ESF_Student_t.h"
+#include "FOH_Student_t.h"
 
 using namespace std;
 
-class University_t{
+class University_t:public Subject_t{
 public:
     //get the university singelton
     static University_t& getInstance();
-    /*
+    
      //notify students that the price go up
      void priceUp();
      
@@ -26,13 +31,14 @@ public:
      
      void Attach(Observer_t* _observer);
      void Detach(Observer_t* _observer);
-     
+    
+     bool detachByName(const string name);
      protected:
      void Notify();
      void NotifyEsf();
      
      
-     */
+     
 private:
     static University_t _university;
     
@@ -48,9 +54,8 @@ private:
     //dont allow assignments
     void operator=(University_t& _un);
     
-     //Observers vectors
-    // vector<FOH_Student_t*> FOH;
-    // vector<ESF_Student_t*> ESF;
+     vector<FOH_Student_t*> FOH;
+     vector<ESF_Student_t*> ESF;
 };
 
 #endif /* defined(__Ex5__University_t__) */

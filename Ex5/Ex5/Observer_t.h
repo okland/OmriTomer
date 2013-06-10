@@ -11,6 +11,7 @@
 
 #include <iostream>
 class Subject_t;
+
 class Observer_t{
     
 public:

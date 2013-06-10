@@ -8,6 +8,5 @@
 
 #include "FOH_Student_t.h"
 
-FOH_Student_t::FOH_Student_t(ImpStudent_t* _impStudent): Student_t(_impStudent){
-    theStudent->SetFaculty("FOH");
+FOH_Student_t::FOH_Student_t(const string _name):ImpStudent_t(_name,"FOH"){
 }

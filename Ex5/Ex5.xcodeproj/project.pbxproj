@@ -13,7 +13,6 @@
 		C4DBC3DC1765064500A7C1FB /* ImpStudent_t.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4DBC3DA1765064500A7C1FB /* ImpStudent_t.cpp */; };
 		C4DBC3DF1765064F00A7C1FB /* Observer_t.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4DBC3DD1765064F00A7C1FB /* Observer_t.cpp */; };
 		C4DBC3E21765065B00A7C1FB /* Student_t.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4DBC3E01765065B00A7C1FB /* Student_t.cpp */; };
-		C4DBC3E51765066B00A7C1FB /* StudentBase_t.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4DBC3E31765066B00A7C1FB /* StudentBase_t.cpp */; };
 		C4DBC3E81765067700A7C1FB /* StudentFactory_t.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4DBC3E61765067700A7C1FB /* StudentFactory_t.cpp */; };
 		C4DBC3EB1765068600A7C1FB /* Subject_t.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4DBC3E91765068600A7C1FB /* Subject_t.cpp */; };
 		C4DBC3EE1765069200A7C1FB /* ESF_Student_t.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4DBC3EC1765069100A7C1FB /* ESF_Student_t.cpp */; };
@@ -45,8 +44,6 @@
 		C4DBC3DE1765064F00A7C1FB /* Observer_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observer_t.h; sourceTree = "<group>"; };
 		C4DBC3E01765065B00A7C1FB /* Student_t.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Student_t.cpp; sourceTree = "<group>"; };
 		C4DBC3E11765065B00A7C1FB /* Student_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student_t.h; sourceTree = "<group>"; };
-		C4DBC3E31765066B00A7C1FB /* StudentBase_t.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StudentBase_t.cpp; sourceTree = "<group>"; };
-		C4DBC3E41765066B00A7C1FB /* StudentBase_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentBase_t.h; sourceTree = "<group>"; };
 		C4DBC3E61765067700A7C1FB /* StudentFactory_t.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StudentFactory_t.cpp; sourceTree = "<group>"; };
 		C4DBC3E71765067700A7C1FB /* StudentFactory_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentFactory_t.h; sourceTree = "<group>"; };
 		C4DBC3E91765068600A7C1FB /* Subject_t.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Subject_t.cpp; sourceTree = "<group>"; };
@@ -97,8 +94,6 @@
 				C4DBC3DE1765064F00A7C1FB /* Observer_t.h */,
 				C4DBC3E01765065B00A7C1FB /* Student_t.cpp */,
 				C4DBC3E11765065B00A7C1FB /* Student_t.h */,
-				C4DBC3E31765066B00A7C1FB /* StudentBase_t.cpp */,
-				C4DBC3E41765066B00A7C1FB /* StudentBase_t.h */,
 				C4DBC3E61765067700A7C1FB /* StudentFactory_t.cpp */,
 				C4DBC3E71765067700A7C1FB /* StudentFactory_t.h */,
 				C4DBC3E91765068600A7C1FB /* Subject_t.cpp */,
@@ -167,7 +162,6 @@
 				C4DBC3DC1765064500A7C1FB /* ImpStudent_t.cpp in Sources */,
 				C4DBC3DF1765064F00A7C1FB /* Observer_t.cpp in Sources */,
 				C4DBC3E21765065B00A7C1FB /* Student_t.cpp in Sources */,
-				C4DBC3E51765066B00A7C1FB /* StudentBase_t.cpp in Sources */,
 				C4DBC3E81765067700A7C1FB /* StudentFactory_t.cpp in Sources */,
 				C4DBC3EB1765068600A7C1FB /* Subject_t.cpp in Sources */,
 				C4DBC3EE1765069200A7C1FB /* ESF_Student_t.cpp in Sources */,
@@ -272,6 +266,7 @@
 				C4DBC3D3176504AA00A7C1FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,18 +10,17 @@
 #define __Ex5__ESF_Student_t__
 
 #include <iostream>
-#include "Student_t.h"
+#include "ImpStudent_t.h"
 #include "Subject_t.h"
 
-class ESF_Student_t:
-public Student_t{
+class ESF_Student_t: public ImpStudent_t{
     friend class StudentFactory_t;
 public:
     void updateAll(Subject_t* _newSubject);
     ~ESF_Student_t(){};
 private:
     //only created by factory
-    ESF_Student_t(ImpStudent_t* _theStudent);
+    ESF_Student_t(const string _name);
     ESF_Student_t(void);
 };
 
